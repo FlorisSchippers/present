@@ -20,6 +20,6 @@
 		<div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
 	</div>
 	<script type="text/javascript" src="js/fullpage.js"></script>
-	<script type="text/javascript" src="js/js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
