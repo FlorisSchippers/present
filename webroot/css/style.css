@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+// Breakpoint at mobile landscape
+@media only screen and (min-width: 640px) {}
+// Breakpoint at tablet
+@media only screen and (min-width: 768px) {}
+// Breakpoint at tablet landscape
+@media only screen and (min-width: 1024px) {}
+// Breakpoint at desktop
+@media only screen and (min-width: 1224px) {}
+
+h1 {
+	display: inline-block;
+	margin: auto;
+}
+
+.slide, .card {
+	width: 0;
+	height: 0;
+	display: grid;
+	overflow: hidden;
+	transition: all 1s ease;
+}
+
+.active {
+	width: 100vw;
+	height: 100vh;
+	overflow: unset;
+}
