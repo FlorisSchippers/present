@@ -2,7 +2,7 @@
 
 ## About
 
-A simple slideshow presenting prototype
+My personal slidedeck, deployed at: [present.florisschippers.nl](https://present.florisschippers.nl/)
 
 Use the ⬅️ and ➡️ arrow keys to navigate slides  
 Use the ⬆️ and ⬇️ arrow keys to navigate cards
