@@ -1,0 +1,35 @@
+{
+  "name": "present",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "",
+  "author": "Floris Schippers",
+  "keywords": [
+    "Present"
+  ],
+  "contributors": [
+    {
+      "name": "Floris Schippers",
+      "email": "florisschippers@gmail.nl"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlorisSchippers/present"
+  },
+  "scripts": {
+    "dev": "webpack -d --watch --progress --colors",
+    "prod": "webpack -p --progress --colors"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}

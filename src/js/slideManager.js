@@ -1,14 +1,11 @@
-window.addEventListener('load', pageLoaded);
-function pageLoaded(e) {
+export function resetDefaults(e) {
      let firstSlide = document.querySelectorAll('.slide')[0];
      let firstSlideFirstCard = firstSlide.querySelectorAll('.card')[0];
      firstSlide.classList.add('active');
      firstSlideFirstCard.classList.add('active');
 }
 
-const body = document.querySelector('body');
-body.addEventListener('keydown', keyPressed);
-function keyPressed(e) {
+export function onKeyPressed(e) {
      if(e.key === 'ArrowRight') {
           nextSlide();
      } else if(e.key === 'ArrowLeft') {
@@ -20,7 +17,7 @@ function keyPressed(e) {
      }
 }
 
-function nextSlide() {
+export function nextSlide() {
      let activeSlide = document.querySelector('.slide.active');
      let activeCard = activeSlide.querySelector('.card.active');
      let nextSlide = activeSlide.nextElementSibling;
@@ -31,7 +28,7 @@ function nextSlide() {
      nextSlideFirstCard.classList.add('active');
 }
 
-function previousSlide() {
+export function previousSlide() {
      let activeSlide = document.querySelector('.slide.active');
      let activeCard = activeSlide.querySelector('.card.active');
      let previousSlide = activeSlide.previousElementSibling;
@@ -42,7 +39,7 @@ function previousSlide() {
      previousSlideFirstCard.classList.add('active');
 }
 
-function nextCard() {
+export function nextCard() {
      let activeSlide = document.querySelector('.slide.active');
      let activeCard = activeSlide.querySelector('.card.active');
      let nextCard = activeCard.nextElementSibling;
@@ -50,7 +47,7 @@ function nextCard() {
      nextCard.classList.add('active');
 }
 
-function previousCard() {
+export function previousCard() {
      let activeSlide = document.querySelector('.slide.active');
      let activeCard = activeSlide.querySelector('.card.active');
      let previousCard = activeCard.previousElementSibling;

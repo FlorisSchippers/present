@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+h1, p {
+  display: inline-block;
+  margin: auto; }
+
+#hamburger {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 50px; }
+
+#sidebar {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  background: linear-gradient(to right, #c8c8c8, rgba(100, 100, 100, 0));
+  transition: all .5s ease; }
+  #sidebar * {
+    display: block;
+    margin: 5px 0 0 5px; }
+  #sidebar.expanded {
+    width: 250px !important; }
+
+.slide, .card {
+  width: 0;
+  height: 0;
+  display: grid;
+  overflow: hidden;
+  transition: all .5s ease; }
+  .slide.active, .card.active {
+    width: 100vw;
+    height: 100vh;
+    overflow: unset; }
+
