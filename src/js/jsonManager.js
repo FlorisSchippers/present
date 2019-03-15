@@ -32,7 +32,8 @@ export function onLoadFile(event) {
 }
 
 export function onSaveFile() {
-    let data = encode(JSON.stringify(json));
+    let generatedJson = generateJson();
+    let data = encodeJson(JSON.stringify(generatedJson));
     let blob = new Blob([data], {
         type: 'application/octet-stream'
     });
@@ -45,10 +46,30 @@ export function onSaveFile() {
     link.dispatchEvent(event);
 }
 
-function encode(string) {
+function encodeJson(string) {
     let output = [];
     for (let i = 0; i < string.length; i++) {
         output[i] = string.charCodeAt(i);
     }
     return new Uint8Array(output);
+}
+
+function generateJson() {
+    let slides = document.querySelectorAll('.slide'), cards, elements, elementsArray, cardsArray, slidesArray;
+    slidesArray = [];
+    slides.forEach((slide) => {
+        cards = slide.querySelectorAll('.card');
+        cardsArray = [];
+        cards.forEach((card) => {
+            elements = card.children;
+            elementsArray = [];
+            for (let i = 0; i < elements.length; i++) {
+                elementsArray.push(elements[i].outerHTML);
+            }
+            cardsArray.push(elementsArray);
+        });
+        slidesArray.push(cardsArray);
+    });
+    console.log(slidesArray);
+    return slidesArray;
 }
