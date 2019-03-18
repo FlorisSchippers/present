@@ -15,9 +15,9 @@ Run `npm run dev` to start webpack to watch all source-files for compilation
 Run `npm run prod` to use webpack to minify all source-files for deployment
 
 
-## Loading & Saving files
+## Loading & Saving slidedecks
 
-Slides can be loaded into the slidedeck, the following structure is used:
+Slidedecks can be loaded into the slidedeck, the following structure is used:
 ```json
 [
   [
@@ -43,3 +43,5 @@ Slides can be loaded into the slidedeck, the following structure is used:
 ]
 ```
 This structure can be broken down where the entire structure is an array of slides, each slide itself is an array of cards, each card itself is an array of HTML elements that all are displayed on the respective card.
+
+Slidedecks can also be saved to JSON files.
